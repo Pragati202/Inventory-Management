@@ -1,0 +1,83 @@
+#bar1{
+   width:100%;
+   height:50px;
+   background-color:  rgb(184, 177, 177);;
+   position: fixed;
+   margin-top: -10px;
+   margin-left: -8px;
+   
+}
+section{
+   margin:auto;
+   padding:10%;
+}
+#bar2{
+     margin:auto;
+     display: block;
+     width:70%;
+     text-align: center;
+     padding-top: 30px;
+     background-color: white;
+     padding-bottom: 10px;
+     border:5px solid white;
+     border-radius: 10px;
+}
+#bar3{
+   width:50%;
+   padding: 30px;
+   text-align: center;
+   margin-left:22%;
+   margin-right: 20%;
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
+h1{
+   text-align: center;
+}
+h4{
+   text-align: center;
+}
+button{
+   text-align: center;
+   background-color:black;
+   color:white;
+   border: 2px solid black;
+   width:100px;
+   height: 40px;
+   cursor: pointer;
+   font-size: 15px;
+   border-radius: 4px;
+}
+input{
+   display:block;
+   width: 90%;
+   padding: 8px 12px;
+   margin:5px 0;
+   box-sizing: border-box;
+   border: 2px solid grey;
+   border-radius: 4px;
+}
+label{
+   display: block;
+   margin-bottom: 10px;
+   font-size: 20px;
+   text-align: left;
+}
+#submit{
+   text-align: center;
+   background-color:black;
+   color:white;
+   border: 2px solid black;
+   width: 135px;;
+   height: 30px;
+   cursor: pointer;
+   font-size: 10px;
+   border-radius: 4px;
+   margin-top: 10px;
+   margin-left: 25%;
+   margin-right: -3%;
+}
+.msg
+{
+   color: red;
+}
