@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+              My Products
+        </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/My_products.css')}}">
+        <style>
+            body{
+                background-image: linear-gradient(45deg,rgba(18, 17, 17, 0.792),rgba(181, 179, 179, 0)),url('static/back1.jpg');
+                background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="bar1"></div>
+        <section>
+        <div id="bar2">
+            <h4 class="msg">
+                {%- for message in get_flashed_messages() %}
+                {{message}}
+                {%- endfor %}
+            </h4>
+            <h1>Grocery Management System</h1>
+            <h3>My Products</h3>
+            <a href="http://127.0.0.1:5000/prod"><button>Home</button></a>
+            <a href="http://127.0.0.1:5000/logout"><button>Logout</button></a>
+            <div id="bar3">
+                <h1>My Products</h1>
+                <table>
+                    <thead>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Price Per Quantity (Rs.)</th>
+                        <th>Quantity Type (each/kg)</th>
+                        <th>Quantity</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        {% for product in products %}
+                        <tr>
+                            <td>{{product.pid}}</td>
+                            <td>{{product.pname}}</td>
+                            <td>{{product.price}}</td>
+                            <td>{{product.quantity_type}}</td>
+                            <td>{{product.total_quantity}}</td>
+                            <td><a href="{{url_for('edit',pid=product.pid)}}"><button id="btn1">Update</button></a></td>
+                            <td><a  href="{{url_for('delete',pid=product.pid)}}"><button id="btn2">Delete</button></a></td>
+                        </tr> 
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <a href="http://127.0.0.1:5000/product"><button>Add More</button></a>
+            </div>
+        </div>
+        </section>
+        
+    </body>
+</html>

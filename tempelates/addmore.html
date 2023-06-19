@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Update Products
+        </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/update.css')}}">
+        <style>
+            body{
+                background-image: linear-gradient(45deg,rgba(18, 17, 17, 0.792),rgba(181, 179, 179, 0)),url('static/back1.jpg');
+                background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="bar1"></div>
+        <section>
+            <div id="bar2">
+                <h4 class="msg">{{ msg }}</h4>
+                <h2>Add More Product</h2>
+                <button onclick="ShowAndHide()">Add Product</button>
+                <a href="http://127.0.0.1:5000/prod"><button>Home</button></a>
+                <a href="http://127.0.0.1:5000/logout"><button>Logout</button></a>
+            </div>
+        </section>
+        <section id="add" style="display:none">
+              <div id="bar3">
+                <form action="/product" method="POST">
+                    <h1>Add More Product</h1>
+                    <label>Product Name:</label>
+                    <input type="text" id="pname" name="pname" placeholder="Product Name">
+                    <label>Price Per quantity:</label>
+                    <input type="number" id="price" name="price" placeholder="Price Per Quantity">
+                    <label>Quantity Type:</label>
+                    <input type="text" id="quantity_type" name="quantity_type" placeholder="Quantity Type">
+                    <label>Quantity:</label>
+                    <input type="number" id="total_quantity" name="total_quantity" placeholder="Quantity">
+                    <input type="submit" id="submit" name="submit">
+                </form>
+            </div>
+        </section>
+        <script>
+            function ShowAndHide(){
+                var x= document.getElementById('add');
+                if(x.style.display=='none'){
+                    x.style.display='block';
+                }else{
+                    x.style.display='none'
+                }
+            }
+            function ShowAndHide1(){
+                var x= document.getElementById('upd');
+                if(x.style.display=='none'){
+                    x.style.display='block';
+                }else{
+                    x.style.display='none'
+                }
+            }
+        </script>
+    </body>
+</html>

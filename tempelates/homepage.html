@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+        <style>
+            body{
+                background-image: linear-gradient(45deg,rgba(18, 17, 17, 0.792),rgba(181, 179, 179, 0)),url('static/back1.jpg');
+                background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="bar1"></div>
+        <section><div id="bar2">
+            <h4 class="msg">{{ msg }}</h4>
+            <h1>Welcome To Grocery Management System </h1>
+            <h4>Please enter to continue</h4>
+            <button onclick="ShowAndHide()">Enter</button>
+            <div id="bar3" style="display:none">
+                <form action="http://127.0.0.1:5000/login" method="POST">
+                    <label>Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <label>Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required> 
+                    <input type="submit" id="submit" name="submit">
+                </form>
+            </div>
+        </div>
+        </section>
+        <script type="text/javascript">
+            function ShowAndHide(){
+                var x= document.getElementById('bar3');
+                if(x.style.display=='none'){
+                    x.style.display='block';
+                }else{
+                    x.style.display='none'
+                }
+            }
+        </script>
+    </body>
+</html>
